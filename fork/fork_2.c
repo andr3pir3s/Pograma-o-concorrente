@@ -35,14 +35,14 @@ int main(int argc, char const *argv[])
             printf("\nSou o processo clonado!\nretorno do fork: %d\n",
             fork_return);
             sleep(20);
-            printf("Sou o processo clonado e vou terminar...\n");
+            printf("Sou o processo clonado e vou terminar, meu PID era: %d\n", getpid());
         }
         else
         {   // só será executado pelo processo original
             printf("\nSou o processo original!\nretorno do fork: %d\n",
             fork_return);
             sleep(20);
-            printf("Sou o processo original e vou terminar...\n");
+            printf("Sou o processo original e vou terminar, meu PID era: %d\n", getpid());
         } 
     }
     return 0;
